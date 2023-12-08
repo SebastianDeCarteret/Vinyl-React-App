@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 import { Vinyl } from "./models/vinyl.model";
-// import Card from "./components/Card";
+import Card from "./components/Card";
 
 function App() {
-  const [vinyls, setVinyls] = useState<Vinyl[]>();
+  const [vinyls = [], setVinyls] = useState<Vinyl[]>();
 
   useEffect(() => {
     fetchVinyls();
@@ -65,13 +65,13 @@ function App() {
     );
   }
 
-  // function vinylsGrid() {
-  //   return (
-  //     <div className="grid-view">
-  //       <Card vinyls={vinyls} />
-  //     </div>
-  //   );
-  // }
+  function vinylsGrid() {
+    return (
+      <div className="grid-view">
+        <Card vinyls={vinyls} />
+      </div>
+    );
+  }
 
   return <>{vinyls ? loaded() : "loading..."}</>;
 }

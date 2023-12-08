@@ -1,6 +1,10 @@
-// import React from "react";
+import React from "react";
+import { Vinyl } from "../models/vinyl.model";
 
-// export default function Card({ vinyls }) {
+interface CardInput {
+  vinyls: Vinyl[];
+}
 
-//   return;
-// }
+export default function Card({ vinyls }: CardInput) {
+  return <></>;
+}
